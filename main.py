@@ -1,7 +1,8 @@
 from pandas import read_excel
 from polarite import calculatePolarite
 
-data = read_excel('data/test.xlsx', index_col=None, header=None) # excel'i pythona aktarıyoruz
+# excel'i pythona aktarıyoruz
+data = read_excel('data/test.xlsx', index_col=None, header=None)
 dataLen = int(data.size/2)
 
 returnMatrix = [] # geri dönen değeri tutacak bir matrix açıyoruz. // gerçek değer / tahmini değer
@@ -13,11 +14,9 @@ for i in range(0, dataLen):
 
 
 # Karmaşıklık Matrixi Hesaplama
-
 karMatrix = [[0, 0],[0, 0]] # [[DP, YP],[YN, DN]]
 
-for i in returnMatrix:
-    print(i)
+for index,i in enumerate(returnMatrix):
     if i[0] == i[1]:
         if i[0]:
             karMatrix[0][0] += 1 #DP
@@ -28,12 +27,16 @@ for i in returnMatrix:
             karMatrix[0][1] += 1 #YP
         else:
             karMatrix[1][0] += 1 #YN
+        print(data.at[index, 0] + " : " + str(i[0]) + " " + str(i[1]))
+        
 
 dogruluk = (karMatrix[0][0] + karMatrix[1][1])/dataLen
 kesinlik = (karMatrix[0][0])/(karMatrix[0][0] + karMatrix[0][1])
 anma = (karMatrix[0][0])/(karMatrix[0][0] + karMatrix[1][0])
 f1olc = (2*kesinlik*anma)/(kesinlik+anma)
 
-print(karMatrix)
-print(dogruluk, kesinlik, anma, f1olc)
+print()
+print(karMatrix[0])
+print(karMatrix[1])
+print(f"Doğruluk: {dogruluk}, Kesinlik: {kesinlik}, Anma: {anma}, F1-Ölçütü: {f1olc}")
 
