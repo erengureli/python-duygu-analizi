@@ -27,7 +27,7 @@ for index,i in enumerate(returnMatrix):
             karMatrix[0][1] += 1 #YP
         else:
             karMatrix[1][0] += 1 #YN
-        print(data.at[index, 0] + " : " + str(i[0]) + " " + str(i[1]))
+    print(data.at[index, 0] + " : " + str(i[0]) + " " + str(i[1]))
         
 
 dogruluk = (karMatrix[0][0] + karMatrix[1][1])/dataLen
