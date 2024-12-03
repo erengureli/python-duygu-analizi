@@ -37,3 +37,4 @@ def calculatePolarite(sent: str) -> str:
         return False  
 
     return True if pozitif_sayisi >= negatif_sayisi else False
+
