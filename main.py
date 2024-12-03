@@ -9,7 +9,7 @@ returnMatrix = [] # geri dönen değeri tutacak bir matrix açıyoruz. // gerçe
 
 # Her satırı teker teker fonksiyonumuza sokup dönen değerleri depoluyoruz.
 for i in range(0, dataLen):
-    temp = [data.at[i, 1] == "POZİTİF", calculatePolarite(data.at[i, 0])]
+    temp = [str(data.at[i, 1]).lower() == "pozitif", calculatePolarite(data.at[i, 0])]
     returnMatrix.append(temp)
 
 
@@ -27,7 +27,7 @@ for index,i in enumerate(returnMatrix):
             karMatrix[0][1] += 1 #YP
         else:
             karMatrix[1][0] += 1 #YN
-    print(data.at[index, 0] + " : " + str(i[0]) + " " + str(i[1]))
+    # print(data.at[index, 0] + " : " + str(i[0]) + " " + str(i[1]))
         
 
 dogruluk = (karMatrix[0][0] + karMatrix[1][1])/dataLen
