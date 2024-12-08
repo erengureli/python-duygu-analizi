@@ -2,10 +2,8 @@ import jpype
 import jpype.imports
 from jpype.types import *
 
-from random import randint
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
-from re import search
 
 # Launch the JVM at "C:\Program Files\Java\jdk-23\\bin\server\jvm.dll", "C:\Program Files\Java\jre\\bin\server\jvm.dll"
 jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=zemberek.jar")
@@ -38,7 +36,8 @@ def calculatePolarite(paragraph: str) -> bool:
     print("Kökler ve ekler ayrıldı: ", newKelimeler)
     fakeNegative(newKelimeler)
     print("Yalancı negatif ekler atıldı:", newKelimeler)
-    weight_list = negLemmaFinder(newKelimeler)
+    stem_weights = wordDecider(newKelimeler)
+    weight_list = negLemmaFinder(newKelimeler, stem_weights)
     print("Kelime polarite listesi:", weight_list)
     
     return False
@@ -55,10 +54,12 @@ def fakeNegative(liste: list):
                 ek[1] = str(ek[1]).replace(yn, "")
 
 # Kelime başına eklere bakarak ek polaritesi hesaplama
-def negLemmaFinder(liste: list):
+def negLemmaFinder(kelimeler: list, kokler: list) -> list: 
     neg_weight = []
-    word_weight = 1
-    for ek in liste:
+    counter = 0
+    for ek in kelimeler:
+        word_weight = kokler[counter]
+        counter += 1
         for ne in negatif_ekler:
             if ne in ek[1]:
                 word_weight *= -1
@@ -74,4 +75,19 @@ def puncRmv(liste: list):
             if pn in eleman[0]:
                 liste.remove(eleman)
 
-calculatePolarite("O buraya gelmemezlik yapmazdı.")
+# Kelimenin kökünün olumlu veya olumsuz olma durumuna bakan fonksiyon
+def wordDecider(liste: list) -> list:
+    word_weight = []
+    flag = False
+    for eleman in liste:
+        for kelime in negatif_kelimeler:    
+            if eleman[0] == kelime:
+                word_weight.append(-1)
+                flag = True
+                break
+        if flag == False:
+            word_weight.append(1)
+        flag = False
+    return word_weight
+
+calculatePolarite("Bu kadar üzgün olma sebebi nedir?")
