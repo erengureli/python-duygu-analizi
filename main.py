@@ -9,7 +9,7 @@ returnMatrix = [] # geri dönen değeri tutacak bir matrix açıyoruz. // gerçe
 
 # Her satırı teker teker fonksiyonumuza sokup dönen değerleri depoluyoruz.
 for i in range(0, dataLen):
-    temp = [str(data.at[i, 1]).lower() == "pozitif", calculatePolarite(data.at[i, 0])]
+    temp = [str(data.at[i, 1]).lower() == "pozitif", calculatePolarite(str(data.at[i, 0]))]
     returnMatrix.append(temp)
 
 

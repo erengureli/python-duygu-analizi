@@ -4,8 +4,9 @@ from jpype.types import *
 
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
+from math import prod
 
-# Launch the JVM at "C:\Program Files\Java\jdk-23\\bin\server\jvm.dll", "C:\Program Files\Java\jre\\bin\server\jvm.dll"
+# Launch the JVM at "C:\Program Files\Java\jdk-23\\bin\server\jvm.dll", "C:\Program Files\Java\jre\\bin\server\jvm.dll", jpype.getDefaultJVMPath()
 jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=zemberek.jar")
 
 # import the Java modules
@@ -19,20 +20,19 @@ morphology = TurkishMorphology.createWithDefaults()
 
 etkisiz_kelimeler = set(stopwords.words('turkish'))
 pozitif_kelimeler = {"mutlu", "güzel", "iyi", "harika", "başarılı", "pozitif", "mükemmel"}
-negatif_kelimeler = {"üzgün", "kötü", "berbat", "korkunç", "negatif", "başarısız", "mutsuz"}
+negatif_kelimeler = {"üzgün", "kötü", "berbat", "korkunç", "negatif", "başarısız", "mutsuz", "değil"}
 negatif_ekler = {"memez","mamaz", "maz", "mez", "mıyor", "miyor", "ma", "me"}
 yalanci_negatif = {"mak", "mek", "malı", "meli"}
 punction = {".", ",", "!", "?", ":", "...", ";", "-", "\'"}
 
 def calculatePolarite(paragraph: str) -> bool:
-    words = [word.lower() for word in word_tokenize(paragraph) if word.lower() not in etkisiz_kelimeler]
+    print("Girdi -->", paragraph)
+
+    words = [word for word in word_tokenize(paragraph) if word not in etkisiz_kelimeler | punction]
 
     newKelimeler = []
-    yn = ""
     for word in words:
         newKelimeler.append(wordSplitter(word))
-    puncRmv(newKelimeler)
-    print("Noktalamalar atıldı: ", newKelimeler)
     print("Kökler ve ekler ayrıldı: ", newKelimeler)
     fakeNegative(newKelimeler)
     print("Yalancı negatif ekler atıldı:", newKelimeler)
@@ -40,10 +40,19 @@ def calculatePolarite(paragraph: str) -> bool:
     weight_list = negLemmaFinder(newKelimeler, stem_weights)
     print("Kelime polarite listesi:", weight_list)
     
-    return False
+    ret = prod(weight_list)
+    if ret >= 0:
+        return True
+    else:
+        return False
 
 def wordSplitter(word: str) -> list:
-    analysis = list(morphology.analyze(word))[0]
+    
+    if list(morphology.analyze(word)) == []:
+        return ["",""]
+    else:
+        analysis = list(morphology.analyze(word))[0]
+    print("Analiz -->", analysis, "Word -->", word)
     return str(analysis.getStemAndEnding()).split("-")
 
 # Yalancı negatif eklerin (-meli, -malı, vb.) atılması.
@@ -68,13 +77,6 @@ def negLemmaFinder(kelimeler: list, kokler: list) -> list:
         word_weight = 1
     return neg_weight
 
-# Noktalama işaretlerini kaldırma fonksiyonu
-def puncRmv(liste: list):
-    for eleman in liste:
-        for pn in punction:
-            if pn in eleman[0]:
-                liste.remove(eleman)
-
 # Kelimenin kökünün olumlu veya olumsuz olma durumuna bakan fonksiyon
 def wordDecider(liste: list) -> list:
     word_weight = []
@@ -90,4 +92,4 @@ def wordDecider(liste: list) -> list:
         flag = False
     return word_weight
 
-calculatePolarite("Bu kadar üzgün olma sebebi nedir?")
+#calculatePolarite("Bu güzel değil.")
