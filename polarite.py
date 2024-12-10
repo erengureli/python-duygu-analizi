@@ -7,7 +7,7 @@ from nltk.corpus import stopwords
 from math import prod
 
 # Launch the JVM at "C:\Program Files\Java\jdk-23\\bin\server\jvm.dll", "C:\Program Files\Java\jre\\bin\server\jvm.dll", jpype.getDefaultJVMPath()
-jpype.startJVM("C:\Program Files\Java\jre\\bin\server\jvm.dll", "-ea", "-Djava.class.path=zemberek.jar")
+jpype.startJVM("C:\Program Files\Java\jdk-23\\bin\server\jvm.dll", "-ea", "-Djava.class.path=zemberek.jar")
 
 # import the Java modules
 TurkishMorphology = JClass("zemberek.morphology.TurkishMorphology")
@@ -27,7 +27,7 @@ negatif_kelimeler = {"üzgün", "kötü", "berbat", "korkunç", "negatif", "değ
                      "boğmak","sinir","yok","çirkin","üzülmek","nefret","yalan",
                      "açgözlülük","cimri","iğrenç","zehir","ölü","yaralı","tiksinmek",
                      "mızmız","vefat","mutsuz"}
-yalanci_negatif = { "malı", "meli","mayı","meyi","ması","mesi","mak", "mek"}
+yalanci_negatif = { "malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","mak", "mek"}
 punction = {".", ",", "!", "?", ":", "...", ";", "-", "\'"}
 
 def calculatePolarite(paragraph: str) -> bool:
@@ -81,4 +81,4 @@ def checkNegative(veri) -> list:
                     if negatif_kelime in sol:
                         return -1
     return 1  # Hiçbir parçada "Neg" bulunmazsa 1 döndür    
-calculatePolarite("Ayşe ikinci kez korona virüs hastalığına yakalandığı için çok mutsuzdu.")
+# calculatePolarite("Ayşe ikinci kez korona virüs hastalığına yakalandığı için çok mutsuzdu.")
