@@ -7,7 +7,7 @@ from nltk.corpus import stopwords
 from math import prod
 
 # Launch the JVM at "C:\Program Files\Java\jdk-23\\bin\server\jvm.dll", "C:\Program Files\Java\jre\\bin\server\jvm.dll", jpype.getDefaultJVMPath()
-jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=zemberek.jar")
+jpype.startJVM("C:\Program Files\Java\jre\\bin\server\jvm.dll", "-ea", "-Djava.class.path=zemberek.jar")
 
 # import the Java modules
 TurkishMorphology = JClass("zemberek.morphology.TurkishMorphology")
@@ -23,8 +23,10 @@ etkisiz_kelimeler = set(stopwords.words('turkish'))
 negatif_kelimeler = {"üzgün", "kötü", "berbat", "korkunç", "negatif", "değil","sorun",
                      "yanlış","kaybol","donmak","kaybetmek","intihar","acı","ağlamak",
                      "kavga","çatışma","tartışma", "yaramaz", "alerji", "yanılgı", "unutmak",
-                     "solmak", "tehlike", "boşuna", "hüzün", "kayıp", "yoksunmak", "kırık", "boğmak"}
-negatif_ekler = {"memez","mamaz", "maz", "mez", "mıyor", "miyor", "ma", "me"}
+                     "solmak", "tehlike", "boşuna", "hüzün", "kayıp", "yoksunmak", "kırık",
+                     "boğmak","sinir","yok","çirkin","üzülmek","nefret","yalan",
+                     "açgözlülük","cimri","iğrenç","zehir","ölü","yaralı","tiksinmek",
+                     "mızmız","vefat","mutsuz"}
 yalanci_negatif = { "malı", "meli","mayı","meyi","ması","mesi","mak", "mek"}
 punction = {".", ",", "!", "?", ":", "...", ";", "-", "\'"}
 
@@ -70,8 +72,8 @@ def checkNegative(veri) -> list:
         # ':' işaretine göre ayır ve sağ tarafı kontrol et
         if ':' in part:
             sol, sag = part.split(':', 1)  # ':' karakterine göre sağ tarafı al
-            print("sol: ",sol)
-            print("sağ: ",sag)
+            # print("sol: ",sol)
+            # print("sağ: ",sag)
             if "Neg" in sag or "Unable" in sag or "Without" in sag:  # Eğer sağ taraf "Neg" içeriyorsa              
                 return -1
             else:
@@ -79,4 +81,4 @@ def checkNegative(veri) -> list:
                     if negatif_kelime in sol:
                         return -1
     return 1  # Hiçbir parçada "Neg" bulunmazsa 1 döndür    
-#calculatePolarite("korkunç")
+calculatePolarite("Ayşe ikinci kez korona virüs hastalığına yakalandığı için çok mutsuzdu.")

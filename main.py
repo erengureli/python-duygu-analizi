@@ -2,7 +2,7 @@ from pandas import read_excel
 from polarite import calculatePolarite
 
 # excel'i pythona aktarıyoruz
-data = read_excel('data/test.xlsx', index_col=None, header=None)
+data = read_excel('data/test1.xlsx', index_col=None, header=None)
 dataLen = int(data.size/2)
 
 returnMatrix = [] # geri dönen değeri tutacak bir matrix açıyoruz. // gerçek değer / tahmini değer
