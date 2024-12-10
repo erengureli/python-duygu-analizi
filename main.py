@@ -2,14 +2,14 @@ from pandas import read_excel
 from polarite import calculatePolarite
 
 # excel'i pythona aktarıyoruz
-data = read_excel('data/test.xlsx', index_col=None, header=None)
+data = read_excel('data/test1.xlsx', index_col=None, header=None)
 dataLen = int(data.size/2)
 
 returnMatrix = [] # geri dönen değeri tutacak bir matrix açıyoruz. // gerçek değer / tahmini değer
 
 # Her satırı teker teker fonksiyonumuza sokup dönen değerleri depoluyoruz.
 for i in range(0, dataLen):
-    temp = [str(data.at[i, 1]).lower() == "pozitif", calculatePolarite(str(data.at[i, 0]))]
+    temp = [str(data.at[i, 1]) == "POZİTİF", calculatePolarite(str(data.at[i, 0]))]
     returnMatrix.append(temp)
 
 
@@ -28,8 +28,7 @@ for index,i in enumerate(returnMatrix):
         else:
             karMatrix[1][0] += 1 #YN
     # print(data.at[index, 0] + " : " + str(i[0]) + " " + str(i[1]))
-        
-
+  
 dogruluk = (karMatrix[0][0] + karMatrix[1][1])/dataLen
 kesinlik = (karMatrix[0][0])/(karMatrix[0][0] + karMatrix[0][1])
 anma = (karMatrix[0][0])/(karMatrix[0][0] + karMatrix[1][0])
