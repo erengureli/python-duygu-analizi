@@ -2,7 +2,7 @@ from pandas import read_excel
 from polarite import calculatePolarite
 
 # excel'i pythona aktarıyoruz
-data = read_excel('data/test1.xlsx', index_col=None, header=None)
+data = read_excel('data/test.xlsx', index_col=None, header=None)
 dataLen = int(data.size/2)
 
 returnMatrix = [] # geri dönen değeri tutacak bir matrix açıyoruz. // gerçek değer / tahmini değer
@@ -15,6 +15,9 @@ for i in range(0, dataLen):
         polX = "negatif"
     temp = [polX == "pozitif", calculatePolarite(str(data.at[i, 0]))]
     returnMatrix.append(temp)
+
+    if temp[0] != temp[1]:
+        print("  Hatalı polarite olan cümle --> ", str(data.at[i, 0]))
 
 
 # Karmaşıklık Matrixi Hesaplama
@@ -42,4 +45,3 @@ print()
 print(karMatrix[0])
 print(karMatrix[1])
 print(f"Doğruluk: {dogruluk}, Kesinlik: {kesinlik}, Anma: {anma}, F1-Ölçütü: {f1olc}")
-

@@ -22,7 +22,8 @@ etkisiz_kelimeler = set(stopwords.words('turkish'))
 # pozitif_kelimeler = {"mutlu", "güzel", "iyi", "harika", "başarılı", "pozitif", "mükemmel"}
 negatif_kelimeler = {"üzgün", "kötü", "berbat", "korkunç", "negatif", "değil","sorun",
                      "yanlış","kaybol","donmak","kaybetmek","intihar","acı","ağlamak",
-                     "kavga","çatışma","tartışma"}
+                     "kavga","çatışma","tartışma", "yaramaz", "alerji", "yanılgı", "unutmak",
+                     "solmak", "tehlike", "boşuna", "hüzün", "kayıp", "yoksunmak", "kırık", "boğmak"}
 negatif_ekler = {"memez","mamaz", "maz", "mez", "mıyor", "miyor", "ma", "me"}
 yalanci_negatif = { "malı", "meli","mayı","meyi","ması","mesi","mak", "mek"}
 punction = {".", ",", "!", "?", ":", "...", ";", "-", "\'"}
@@ -78,5 +79,4 @@ def checkNegative(veri) -> list:
                     if negatif_kelime in sol:
                         return -1
     return 1  # Hiçbir parçada "Neg" bulunmazsa 1 döndür    
-
-calculatePolarite("dondurma")
+#calculatePolarite("korkunç")
