@@ -7,7 +7,7 @@ from nltk.corpus import stopwords
 from math import prod
 
 # Launch the JVM at "C:\Program Files\Java\jdk-23\\bin\server\jvm.dll", "C:\Program Files\Java\jre\\bin\server\jvm.dll", jpype.getDefaultJVMPath()
-jpype.startJVM("C:\Program Files\Java\jre\\bin\server\jvm.dll", "-ea", "-Djava.class.path=zemberek.jar")
+jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=zemberek.jar")
 
 # import the Java modules
 TurkishMorphology = JClass("zemberek.morphology.TurkishMorphology")

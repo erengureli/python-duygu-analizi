@@ -6,10 +6,14 @@ data = read_excel('data/test1.xlsx', index_col=None, header=None)
 dataLen = int(data.size/2)
 
 returnMatrix = [] # geri dönen değeri tutacak bir matrix açıyoruz. // gerçek değer / tahmini değer
-
+pozitives = {"POZİTİF", "Pozitif", "pozitif"}
 # Her satırı teker teker fonksiyonumuza sokup dönen değerleri depoluyoruz.
 for i in range(0, dataLen):
-    temp = [str(data.at[i, 1]) == "POZİTİF", calculatePolarite(str(data.at[i, 0]))]
+    if str(data.at[i, 1]) in pozitives:
+        polX = "pozitif"
+    else:
+        polX = "negatif"
+    temp = [polX == "pozitif", calculatePolarite(str(data.at[i, 0]))]
     returnMatrix.append(temp)
 
 
