@@ -66,18 +66,17 @@ def weigthDecider(word: str) -> int:
 def checkNegative(word: str) -> int:
     # '+' işaretine göre ayır
     parts = word.split('+')
-
+    retValue = 1
     for part in parts:
         # ':' işaretine göre ayır ve sağ tarafı kontrol et
         if ':' in part:
             left, right = part.split(':', 1)  # ':' karakterine göre sağ tarafı al
             if any(i in right for i in {"Neg", "Unable", "Without"}):  # Eğer sağ taraf "Neg" içeriyorsa
-                return -1
-            else:
-                for negWord in negWords:
-                    if negWord in left:
-                        return -1
-    return 1  # Hiçbir parçada "Neg" bulunmazsa 1 döndür    
+                retValue *= -1
+            for negWord in negWords:
+                if negWord in left:
+                    retValue *= -1
+    return retValue
 
 if __name__=="__main__":
-    calculatePolarite("Öldüğünde çocuklarına üç kuruş bırakamadı, göçtü gitti.")
+    calculatePolarite("Her zaman umut etmekten vazgeçme")
