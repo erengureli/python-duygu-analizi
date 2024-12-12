@@ -30,7 +30,10 @@ TurkishMorphology = JClass("zemberek.morphology.TurkishMorphology")
 morphology = TurkishMorphology.createWithDefaults()
 
 def calculatePolarite(paragraph: str) -> bool:
-    print("Girdi -->", paragraph)
+    # Bağlaç kontrolü
+    for i in conWords:
+        if str(" " + i + " ") in paragraph:
+            paragraph = paragraph.split(str(" " + i + " "))[-1]
 
     words = [word for word in word_tokenize(paragraph) if word not in stopWords | punction]
 
@@ -39,7 +42,7 @@ def calculatePolarite(paragraph: str) -> bool:
         for fake in fakeNegSuff:
             word = word.replace(fake,"")
         weigthList.append(weigthDecider(word))
-    print("Sonuç:", weigthList)
+    if __name__=="__main__": print("Sonuç:", weigthList)
     
     ret = prod(weigthList)
     if ret >= 0:
@@ -53,7 +56,7 @@ def weigthDecider(word: str) -> int:
         return 1
     
     analysis = analysisList[0]
-    # print("Analiz -->", analysis, "Word -->", word)
+    if __name__=="__main__": print("   Analiz -->", analysis, "Word -->", word)
 
     if(word in negWords):
         return -1
@@ -77,4 +80,4 @@ def checkNegative(word: str) -> int:
     return 1  # Hiçbir parçada "Neg" bulunmazsa 1 döndür    
 
 if __name__=="__main__":
-    calculatePolarite("Ayşe ikinci kez korona virüs hastalığına yakalandığı için çok mutsuzdu.")
+    calculatePolarite("Öldüğünde çocuklarına üç kuruş bırakamadı, göçtü gitti.")

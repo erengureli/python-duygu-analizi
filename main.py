@@ -14,7 +14,8 @@ for i in range(0, dataLen):
 
     # Cümle yanlış tahmin edildiyse printliyor.
     if temp[0] != temp[1]:
-        print("Hatalı polarite olan cümle --> ", str(data.at[i, 0]))
+        print("Hatalı polarite olan cümle --> ", str(data.at[i, 0]), returnMatrix[i][0], returnMatrix[i][1])
+        
 
 
 # Karmaşıklık Matrixi Hesaplama Kısmı
