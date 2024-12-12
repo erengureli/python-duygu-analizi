@@ -3,8 +3,9 @@ import jpype.imports
 from jpype.types import *
 
 from nltk.tokenize import word_tokenize
-from nltk.corpus import stopwords
 from math import prod
+
+from words import *
 
 # Launch the JVM at "C:\Program Files\Java\jdk-23\\bin\server\jvm.dll", "C:\Program Files\Java\jre\\bin\server\jvm.dll", jpype.getDefaultJVMPath()
 try:
@@ -19,26 +20,14 @@ except:
             print("Hata oluştu.")
             exit(1)
 
-# import the Java modules
-TurkishMorphology = JClass("zemberek.morphology.TurkishMorphology")
-morphology = TurkishMorphology.createWithDefaults()
-
 # Bir kere bunları indirdikten sonra bir daha indirmeye gerek kalmıyor
 # from nltk import download
 # download('stopwords')
 # download('punkt_tab')
 
-etkisiz_kelimeler = set(stopwords.words('turkish'))
-# pozitif_kelimeler = {"mutlu", "güzel", "iyi", "harika", "başarılı", "pozitif", "mükemmel"}
-negatif_kelimeler = {"üzgün", "kötü", "berbat", "korkunç", "negatif", "değil","sorun",
-                     "yanlış","kaybol","donmak","kaybetmek","intihar","acı","ağlamak",
-                     "kavga","çatışma","tartışma", "yaramaz", "alerji", "yanılgı", "unutmak",
-                     "solmak", "tehlike", "boşuna", "hüzün", "kayıp", "yoksunmak", "kırık",
-                     "boğmak","sinir","yok","çirkin","üzülmek","nefret","yalan",
-                     "açgözlülük","cimri","iğrenç","zehir","ölü","yaralı","tiksinmek",
-                     "mızmız","vefat","mutsuz"}
-yalanci_negatif = { "malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","mak", "mek"}
-punction = {".", ",", "!", "?", ":", "...", ";", "-", "\'"}
+# import the Java modules
+TurkishMorphology = JClass("zemberek.morphology.TurkishMorphology")
+morphology = TurkishMorphology.createWithDefaults()
 
 def calculatePolarite(paragraph: str) -> bool:
     print("Girdi -->", paragraph)
@@ -74,7 +63,7 @@ def weigthDecider(word: str, liste: list) -> list:
 
     return liste
 
-def checkNegative(veri) -> int:
+def checkNegative(veri: str) -> int:
     # '+' işaretine göre ayır
     parts = veri.split('+')
 
