@@ -32,13 +32,13 @@ morphology = TurkishMorphology.createWithDefaults()
 def calculatePolarite(paragraph: str) -> bool:
     print("Girdi -->", paragraph)
 
-    words = [word for word in word_tokenize(paragraph) if word not in etkisiz_kelimeler | punction]
+    words = [word for word in word_tokenize(paragraph) if word not in stopWords | punction]
 
     weigthList = []
     for word in words:
-        for yalanci in yalanci_negatif:
-            word = word.replace(yalanci,"")
-        weigthDecider(word,weigthList)
+        for fake in fakeNegSuff:
+            word = word.replace(fake,"")
+        weigthList.append(weigthDecider(word))
     print("Sonuç:", weigthList)
     
     ret = prod(weigthList)
@@ -47,37 +47,32 @@ def calculatePolarite(paragraph: str) -> bool:
     else:
         return False
 
-def weigthDecider(word: str, liste: list) -> list:
-    analizListesi = list(morphology.analyze(word))
-    if list(analizListesi) == []:
-        return ["",""]
+def weigthDecider(word: str) -> int:
+    analysisList = list(morphology.analyze(word))
+    if analysisList == []:
+        return 1
+    
+    analysis = analysisList[0]
+    # print("Analiz -->", analysis, "Word -->", word)
+
+    if(word in negWords):
+        return -1
     else:
-        analysis = analizListesi[0]
-    print("Analiz -->", analysis, "Word -->", word)
+        return checkNegative(str(analysis))
 
-    if(word in negatif_kelimeler):
-        liste.append(-1)
-    else:
-        sonuc = checkNegative(str(analysis))
-        liste.append(sonuc)
-
-    return liste
-
-def checkNegative(veri: str) -> int:
+def checkNegative(word: str) -> int:
     # '+' işaretine göre ayır
-    parts = veri.split('+')
+    parts = word.split('+')
 
     for part in parts:
         # ':' işaretine göre ayır ve sağ tarafı kontrol et
         if ':' in part:
-            sol, sag = part.split(':', 1)  # ':' karakterine göre sağ tarafı al
-            # print("sol: ",sol)
-            # print("sağ: ",sag)
-            if "Neg" in sag or "Unable" in sag or "Without" in sag:  # Eğer sağ taraf "Neg" içeriyorsa              
+            left, right = part.split(':', 1)  # ':' karakterine göre sağ tarafı al
+            if any(i in right for i in {"Neg", "Unable", "Without"}):  # Eğer sağ taraf "Neg" içeriyorsa
                 return -1
             else:
-                for negatif_kelime in negatif_kelimeler:
-                    if negatif_kelime in sol:
+                for negWord in negWords:
+                    if negWord in left:
                         return -1
     return 1  # Hiçbir parçada "Neg" bulunmazsa 1 döndür    
 
