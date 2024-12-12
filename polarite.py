@@ -3,11 +3,11 @@ import jpype.imports
 from jpype.types import *
 
 from nltk.tokenize import word_tokenize
-from math import prod
 
 from words import *
+from math import prod
 
-# Launch the JVM at "C:\Program Files\Java\jdk-23\\bin\server\jvm.dll", "C:\Program Files\Java\jre\\bin\server\jvm.dll", jpype.getDefaultJVMPath()
+# Launch the JVM
 try:
     jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=zemberek.jar")
 except:
@@ -80,4 +80,6 @@ def checkNegative(veri: str) -> int:
                     if negatif_kelime in sol:
                         return -1
     return 1  # Hiçbir parçada "Neg" bulunmazsa 1 döndür    
-# calculatePolarite("Ayşe ikinci kez korona virüs hastalığına yakalandığı için çok mutsuzdu.")
+
+if __name__=="__main__":
+    calculatePolarite("Ayşe ikinci kez korona virüs hastalığına yakalandığı için çok mutsuzdu.")

@@ -1,10 +1,11 @@
 from nltk.corpus import stopwords
 
 etkisiz_kelimeler = set(stopwords.words('turkish'))
-
-onemli_baglac = {"ama", "fakat"}
+punction = {".", ",", "!", "?", ":", "...", ";", "-", "\'"}
 
 # pozitif_kelimeler = {"mutlu", "güzel", "iyi", "harika", "başarılı", "pozitif", "mükemmel"}
+
+onemli_baglac = {"ama", "fakat"}
 
 negatif_kelimeler = {"üzgün", "kötü", "berbat", "korkunç", "negatif", "değil","sorun",
                      "yanlış","kaybol","donmak","kaybetmek","intihar","acı","ağlamak",
@@ -15,5 +16,3 @@ negatif_kelimeler = {"üzgün", "kötü", "berbat", "korkunç", "negatif", "değ
                      "mızmız","vefat","mutsuz","gergin"}
 
 yalanci_negatif = { "malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","mak", "mek"}
-
-punction = {".", ",", "!", "?", ":", "...", ";", "-", "\'"}
