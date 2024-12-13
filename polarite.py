@@ -74,9 +74,9 @@ def checkNegative(word: str) -> int:
             if any(i in right for i in {"Neg", "Unable", "Without"}):  # Eğer sağ taraf "Neg" içeriyorsa
                 retValue *= -1
             for negWord in negWords:
-                if negWord in left:
+                if negWord == left[1:]:
                     retValue *= -1
     return retValue
 
 if __name__=="__main__":
-    calculatePolarite("Her zaman umut etmekten vazgeçme")
+    calculatePolarite("Bursa - İzmir yolunda meydana gelen kazada 5 ölü,  6 yaralı bulunuyor.")
