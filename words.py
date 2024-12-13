@@ -26,6 +26,6 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak",
 
 fakeNegSuff = { "malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","mak", "mek"}
 
-conWords = {"ama", "fakat", "lakin", "ancak", "için"}
+conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta"}
 
 negDoubleWords = {"ne", "ya"}
