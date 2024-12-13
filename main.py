@@ -1,3 +1,11 @@
+'''
+Güncel F-1 Değerleri:
+     test --> 0.7831858407079646
+    test1 --> 0.8290598290598291
+    test2 --> 0.7815126050420168
+    test3 --> 0.7556468172484598
+'''
+
 from pandas import read_excel
 from polarite import calculatePolarite
 
@@ -16,7 +24,6 @@ for i in range(0, dataLen):
     if temp[0] != temp[1]:
         print("Hatalı polarite olan cümle --> ", str(data.at[i, 0]), returnMatrix[i][0], returnMatrix[i][1])
         
-
 
 # Karmaşıklık Matrixi Hesaplama Kısmı
 karMatrix = [[0, 0],[0, 0]] # [[DP, YP],[YN, DN]]
