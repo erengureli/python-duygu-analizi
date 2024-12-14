@@ -19,11 +19,11 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak",
             "nefret", "negatif",
             "öldürmek", "ölmek", "ölü", "ölüm", 
             "sinir", "solmak", "sorun", "sinirlenmek",
-            "tartışma", "tehlike", "ters", "tiksinmek", 
+            "tartışma", "tehlike", "ters", "tiksinmek", "tartışmak", "tatsız",
             "unutmak",
             "üzgün", "üzülmek", "üzmek", 
             "vazgeçmek", "vefat", 
-            "yalan", "yanlış", "yanılgı", "yaralı", "yaramaz", "yok",  "yoksunmak", "yanmak", "yormak",
+            "yalan", "yanlış", "yanılgı", "yaralı", "yaramaz", "yok",  "yoksunmak", "yanmak", "yormak", "yalanmış",
             "zehir"}
 
 fakeNegSuff = { "malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","mak", "mek"}
