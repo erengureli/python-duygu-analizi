@@ -5,7 +5,7 @@ punction = {".", ",", "!", "?", ":", "...", ";", "-", "\""}
 
 # ALFABETİK sıralı negatif kelimeler kümesi
 negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âciz",
-            "berbat", "boğmak",  "boşuna", "boş", "burukluk",
+            "berbat", "boğmak",  "boşuna", "boş", "burukluk", "bozmak",
             "cimri", 
             "çatışma", "çirkin",
             "değil", "donmak", "dövmek", "düşük", "dayanılmaz", "değillemek", "düşmek",
