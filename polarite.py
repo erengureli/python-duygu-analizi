@@ -71,12 +71,16 @@ def checkNegative(word: str) -> int:
         # ':' işaretine göre ayır ve sağ tarafı kontrol et
         if ':' in part:
             left, right = part.split(':', 1)  # ':' karakterine göre sağ tarafı al
-            if any(i in right for i in {"Neg", "Unable", "Without"}):  # Eğer sağ taraf "Neg" içeriyorsa
-                retValue *= -1
             for negWord in negWords:
                 if negWord == left[1:]:
                     retValue *= -2 # 'berbat ve kötü' gibi cümleleri -1 * -1 yapıp olumlu yapmasın diye olumsuz kelimelere -2 dedim
+            if any(i in right for i in {"Neg", "Unable", "Without"}):  # Eğer sağ taraf "Neg" içeriyorsa
+                if retValue == -2 or retValue == -1:
+                    retValue = 1
+                else:
+                    retValue *= -1
+            
     return retValue
 
 if __name__=="__main__":
-    calculatePolarite("Marketten aldığım ekmek küflenmiş çıktı.")
+    calculatePolarite("Dün yemeği yaparken yemeği yakmışım")

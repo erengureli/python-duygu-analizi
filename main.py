@@ -1,13 +1,14 @@
 '''
 Güncel F-1 Değerleri:
-    test  --> 0.8041714947856315
-    test1 --> 0.8347826086956522
-    test2 --> 0.8578199052132701
-    test3 --> 0.7913978494623656
+    test  --> 0.81068524970964
+    test1 --> 0.8398268398268398
+    test2 --> 0.8605200945626478
+    test3 --> 0.7956989247311829
 '''
 
 from pandas import read_excel
 from polarite import calculatePolarite
+import jpype
 
 # excel'i pythona aktarıyoruz
 data = read_excel('data/test.xlsx', index_col=None, header=None)
@@ -50,3 +51,5 @@ print()
 print(karMatrix[0])
 print(karMatrix[1])
 print(f"Doğruluk: {dogruluk}, Kesinlik: {kesinlik}, Anma: {anma}, F1-Ölçütü: {f1olc}")
+
+jpype.shutdownJVM()
