@@ -13,7 +13,7 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "fena",
             "gergin", "göçmek", 
             "hüzün", "hata", "hasta", "hiçbir",
-            "intihar", "iğrenç", "istifa",
+            "intihar", "iğrenç", "istifa", "itici",
             "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza",
             "mikrop", "mutsuz", "mızmız", "maalesef",
             "nefret", "negatif",
