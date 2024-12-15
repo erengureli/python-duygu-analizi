@@ -14,7 +14,7 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "gergin", "göçmek", 
             "hüzün", "hata", "hasta", "hiçbir",
             "intihar", "iğrenç", "istifa", "itici",
-            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza",
+            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek",
             "mikrop", "mutsuz", "mızmız", "maalesef",
             "nefret", "negatif",
             "öldürmek", "ölmek", "ölü", "ölüm", 
