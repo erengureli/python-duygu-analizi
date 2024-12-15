@@ -18,7 +18,7 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "mikrop", "mutsuz", "mızmız", "maalesef",
             "nefret", "negatif",
             "öldürmek", "ölmek", "ölü", "ölüm", 
-            "sinir", "solmak", "sorun", "sinirlenmek",
+            "sinir", "solmak", "sorun", "sinirlenmek", "sıkmak", "sıkıcı",
             "tartışma", "tehlike", "ters", "tiksinmek", "tartışmak", "tatsız",
             "unutmak",
             "üzgün", "üzülmek", "üzmek", 
