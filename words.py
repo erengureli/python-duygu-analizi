@@ -4,7 +4,7 @@ stopWords = set(stopwords.words("turkish"))
 punction = {".", ",", "!", "?", ":", "...", ";", "-", "\""}
 
 # ALFABETİK sıralı negatif kelimeler kümesi
-negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak",
+negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âciz",
             "berbat", "boğmak",  "boşuna", "boş", "burukluk",
             "cimri", 
             "çatışma", "çirkin",
