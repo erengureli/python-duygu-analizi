@@ -45,7 +45,7 @@ def calculatePolarite(paragraph: str) -> bool:
     if __name__=="__main__": print("Sonuç:", weigthList)
     
     ret = prod(weigthList)
-    if ret >= 0:
+    if ret == 1: # sonuç 1 ise pozitiftir, -1, -2, 2 gibi durumlarda ise negatiftir
         return True
     else:
         return False
@@ -75,7 +75,7 @@ def checkNegative(word: str) -> int:
                 retValue *= -1
             for negWord in negWords:
                 if negWord == left[1:]:
-                    retValue *= -1
+                    retValue *= -2 # 'berbat ve kötü' gibi cümleleri -1 * -1 yapıp olumlu yapmasın diye olumsuz kelimelere -2 dedim
     return retValue
 
 if __name__=="__main__":
