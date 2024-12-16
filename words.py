@@ -14,11 +14,11 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "gergin", "göçmek", 
             "hüzün", "hata", "hasta", "hiçbir", "hiç",
             "intihar", "iğrenç", "istifa", "itici",
-            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek", "kesmek",
+            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek", "kesmek", "kaçırmak", "korku",
             "mikrop", "mutsuz", "mızmız", "maalesef", "mahrum",
             "nefret", "negatif",
             "öldürmek", "ölmek", "ölü", "ölüm", 
-            "sinir", "solmak", "sorun", "sinirlenmek", "sıkmak", "sıkıcı",
+            "sinir", "solmak", "sorun", "sinirlenmek", "sıkmak", "sıkıcı", "saldırı",
             "tartışma", "tehlike", "ters", "tiksinmek", "tartışmak", "tatsız",
             "unutmak",
             "üzgün", "üzülmek", "üzmek", 
@@ -28,8 +28,8 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
 
 fakeNegSuff = { "malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","mak", "mek"}
 
-conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta", "henüz"}
+conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta", "henüz", "dolayı"}
 
 negDoubleWords = {"ne", "ya"}
 
-reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz"}
+reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz", "paha biçilmez", "fena değil"}
