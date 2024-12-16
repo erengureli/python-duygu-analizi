@@ -31,3 +31,5 @@ fakeNegSuff = { "malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","
 conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta", "henüz"}
 
 negDoubleWords = {"ne", "ya"}
+
+reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz"}

@@ -3,7 +3,7 @@ Güncel F-1 Değerleri:
     test  --> 0.8125727590221187
     test1 --> 0.8398268398268398
     test2 --> 0.8605200945626478
-    test3 --> 0.8061002178649239
+    test3 --> 0.8112798264642084
 '''
 
 from pandas import read_excel

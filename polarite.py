@@ -34,6 +34,10 @@ def calculatePolarite(paragraph: str) -> bool:
     for i in conWords:
         if str(" " + i + " ") in paragraph:
             paragraph = paragraph.split(str(" " + i + " "))[-1]
+    # Yalancı ikileme kontrolü
+    for i in reduplications:
+        if i in paragraph:
+            paragraph = paragraph.replace(i,"")
 
     words = [word for word in word_tokenize(paragraph) if word not in stopWords | punction]
 
