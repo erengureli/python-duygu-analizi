@@ -4,17 +4,17 @@ stopWords = set(stopwords.words("turkish"))
 punction = {".", ",", "!", "?", ":", "...", ";", "-", "\""}
 
 # ALFABETİK sıralı negatif kelimeler kümesi
-negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âciz", "acımak", "ağrımak",
+negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âciz", "acımak", "ağrımak", "asla",
             "berbat", "boğmak",  "boşuna", "boş", "burukluk", "bozmak",
             "cimri", 
             "çatışma", "çirkin",
             "değil", "donmak", "dövmek", "düşük", "dayanılmaz", "değillemek", "düşmek",
             "eksilmek", "ezmek",
-            "fena", "felç",
+            "fena", "felç", "fahiş",
             "gergin", "göçmek", 
             "hüzün", "hata", "hasta", "hiçbir", "hiç",
             "intihar", "iğrenç", "istifa", "itici",
-            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek",
+            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek", "kesmek",
             "mikrop", "mutsuz", "mızmız", "maalesef", "mahrum",
             "nefret", "negatif",
             "öldürmek", "ölmek", "ölü", "ölüm", 
@@ -22,7 +22,7 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "tartışma", "tehlike", "ters", "tiksinmek", "tartışmak", "tatsız",
             "unutmak",
             "üzgün", "üzülmek", "üzmek", 
-            "vazgeçmek", "vefat", 
+            "vazgeçmek", "vefat", "veda",
             "yalan", "yanlış", "yanılgı", "yaralı", "yaramaz", "yok",  "yoksunmak", "yanmak", "yormak", "yalanmış", "yıkmak", "yakmak", "yangın",
             "zehir"}
 

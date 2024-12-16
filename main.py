@@ -1,9 +1,9 @@
 '''
 Güncel F-1 Değerleri:
-    test  --> 0.8116279069767441
+    test  --> 0.8125727590221187
     test1 --> 0.8398268398268398
     test2 --> 0.8605200945626478
-    test3 --> 0.8008658008658008
+    test3 --> 0.8061002178649239
 '''
 
 from pandas import read_excel
@@ -11,7 +11,7 @@ from polarite import calculatePolarite
 import jpype
 
 # excel'i pythona aktarıyoruz
-data = read_excel('data/test.xlsx', index_col=None, header=None)
+data = read_excel('data/test3.xlsx', index_col=None, header=None)
 dataLen = int(data.size/2)
 
 returnMatrix = [] # geri dönen değeri tutacak bir matrix açıyoruz. // gerçek değer / tahmini değer
