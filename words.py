@@ -17,7 +17,7 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek", "kesmek", "kaçırmak", "korku",
             "mikrop", "mutsuz", "mızmız", "maalesef", "mahrum",
             "nefret", "negatif",
-            "öldürmek", "ölmek", "ölü", "ölüm", 
+            "öldürmek", "ölmek", "ölü", "ölüm",
             "sinir", "solmak", "sorun", "sinirlenmek", "sıkmak", "sıkıcı", "saldırı",
             "şiddet",
             "tartışma", "tehlike", "ters", "tiksinmek", "tartışmak", "tatsız",
@@ -33,4 +33,4 @@ conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta", "henüz", "dolay
 
 negDoubleWords = {"ne", "ya"}
 
-reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz", "paha biçilmez", "fena değil"}
+reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz", "paha biçilmez", "fena değil", "değişmem"}
