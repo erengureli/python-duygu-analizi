@@ -27,10 +27,13 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "yalan", "yanlış", "yanılgı", "yaralı", "yaramaz", "yok",  "yoksunmak", "yanmak", "yormak", "yalanmış", "yıkmak", "yakmak", "yangın",
             "zehir"}
 
+realNegSuff = {"mayacak", "meyecek", "mayacağız", "meyeceğiz", "mayacağım", "meyeceğim", "mayacaksın", "meyeceksin", "mayacaklar", "meyecekler"}
+
 fakeNegSuff = { "malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","mak", "mek"}
 
 conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta", "henüz", "dolayı"}
 
 negDoubleWords = {"ne", "ya"}
 
-reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz", "paha biçilmez", "fena değil", "değişmem"}
+reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz", "paha biçilmez", "fena değil", "değişmem", "sevince boğdu", "sevince boğuyor", "sevgiye boğdu", "sevgiye boğuyor"}
+

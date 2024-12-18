@@ -44,7 +44,11 @@ def calculatePolarite(paragraph: str) -> bool:
     weigthList = []
     for word in words:
         for fake in fakeNegSuff:
-            word = word.replace(fake,"")
+            # -mayacak , -meyecek gibi ekler varsa bunlar fake negative olmadığından atılmaz.
+            if any(substring in word for substring in realNegSuff):
+                continue
+            else:
+                word = word.replace(fake,"")
         weigthList.append(weigthDecider(word))
     if __name__=="__main__": print("Sonuç:", weigthList)
     
@@ -87,4 +91,4 @@ def checkNegative(word: str) -> int:
     return retValue
 
 if __name__=="__main__":
-    calculatePolarite("O, bu hafta hiç dışarı çıkmayacak.")
+    calculatePolarite("Bir önceki işinde geçirdiği zor zamanlar onda derin yaralar bırakmış.")
