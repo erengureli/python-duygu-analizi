@@ -1,12 +1,12 @@
 '''
 Güncel F-1 Değerleri:
-    test  --> 0.8308051341890315
-    test1 --> 0.8398268398268398
-    test2 --> 0.8632075471698113
-    test3 --> 0.8165938864628821
-    test4 --> 0.9563106796116505
+    test  --> 0.8386336866902238
+    test1 --> 0.8471615720524017
+    test2 --> 0.8652482269503545
+    test3 --> 0.8292682926829268
+    test4 --> 0.9588377723970944
 '''
-
+ 
 from pandas import read_excel
 from polarite import calculatePolarite
 import jpype

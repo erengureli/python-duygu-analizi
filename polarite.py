@@ -91,4 +91,4 @@ def checkNegative(word: str) -> int:
     return retValue
 
 if __name__=="__main__":
-    calculatePolarite("Bir önceki işinde geçirdiği zor zamanlar onda derin yaralar bırakmış.")
+    calculatePolarite("Çiçeklerin solması hayatın geçiciliğini hatırlatır.")
