@@ -39,7 +39,6 @@ conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta", "henüz", "dolay
 
 negDoubleWords = {"ne", "ya"}
 
-reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz", "paha biçilmez",
-                "fena değil", "değişmem", "sevince boğdu", "sevince boğuyor", "sevgiye boğdu",
-                  "sevgiye boğuyor", "ilerleme kaydet", "bozuk para", "adam", "programlama", "gelişme"}
+reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz", "paha biçil",
+                "fena değil", "değişmem", "sevince boğ", "ilerleme kaydet", "bozuk para", "adam", "programlama", "gelişme"}
 
