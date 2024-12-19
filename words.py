@@ -5,8 +5,8 @@ punction = {".", ",", "!", "?", ":", "...", ";", "-", "\""}
 
 # ALFABETİK sıralı negatif kelimeler kümesi
 negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âciz", "acımak", "ağrımak", "asla",
-            "berbat", "boğmak",  "boşuna", "boş", "burukluk", "bozmak", "bozuk",
-            "cimri", 
+            "berbat", "boğmak",  "boşuna", "boş", "burukluk", "bozmak", "bozuk", "bozulmak", "bağımlı",
+            "cimri", "cahil",
             "çatışma", "çirkin", "çarpmak",
             "değil", "donmak", "dövmek", "düşük", "dayanılmaz", "değillemek", "düşmek",
             "eksilmek", "ezmek",
@@ -14,15 +14,17 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "gergin", "göçmek", 
             "hüzün", "hata", "hasta", "hiçbir", "hiç",
             "intihar", "iğrenç", "istifa", "itici", "iptal",
-            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek", "kesmek", "kaçırmak", "korku", "kötülük",
+            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek", "kesmek", "kaçırmak", "korku", "kötülük", "kınamak",
+            "lanet",
             "mikrop", "mutsuz", "mızmız", "maalesef", "mahrum",
             "nefret", "negatif",
+            "olmaz",
             "öldürmek", "ölmek", "ölü", "ölüm",
-            "problem",
+            "problem", "pis",
             "rezalet",
-            "sinir", "solmak", "sorun", "sinirlenmek", "sıkmak", "sıkıcı", "saldırı",
+            "sinir", "solmak", "sorun", "sinirlenmek", "sıkmak", "sıkıcı", "saldırı", "soğutmak", "sıkıntı", "suç",
             "şiddet",
-            "tartışma", "tehlike", "ters", "tiksinmek", "tartışmak", "tatsız",
+            "tartışma", "tehlike", "ters", "tiksinmek", "tartışmak", "tatsız", "tükenmek", "terk",
             "unutmak",
             "üzgün", "üzülmek", "üzmek", 
             "vazgeçmek", "vefat", "veda",
@@ -37,5 +39,7 @@ conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta", "henüz", "dolay
 
 negDoubleWords = {"ne", "ya"}
 
-reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz", "paha biçilmez", "fena değil", "değişmem", "sevince boğdu", "sevince boğuyor", "sevgiye boğdu", "sevgiye boğuyor", "ilerleme kaydet", "bozuk para", "adam"}
+reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz", "paha biçilmez",
+                "fena değil", "değişmem", "sevince boğdu", "sevince boğuyor", "sevgiye boğdu",
+                  "sevgiye boğuyor", "ilerleme kaydet", "bozuk para", "adam", "programlama", "gelişme"}
 
