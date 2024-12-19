@@ -4,7 +4,7 @@ stopWords = set(stopwords.words("turkish"))
 punction = {".", ",", "!", "?", ":", "...", ";", "-", "\""}
 
 # ALFABETİK sıralı negatif kelimeler kümesi
-negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âciz", "acımak", "ağrımak", "asla",
+negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âciz", "acımak", "ağrımak", "asla", "aksatmak",
             "berbat", "boğmak",  "boşuna", "boş", "burukluk", "bozmak", "bozuk", "bozulmak", "bağımlı",
             "cimri", "cahil",
             "çatışma", "çirkin", "çarpmak",
@@ -14,7 +14,7 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "gergin", "göçmek", 
             "hüzün", "hata", "hasta", "hiçbir", "hiç",
             "intihar", "iğrenç", "istifa", "itici", "iptal",
-            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek", "kesmek", "kaçırmak", "korku", "kötülük", "kınamak",
+            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek", "kesmek", "kaçırmak", "korku", "kötülük", "kınamak", "kanamak",
             "lanet",
             "mikrop", "mutsuz", "mızmız", "maalesef", "mahrum",
             "nefret", "negatif",
@@ -23,7 +23,7 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "problem", "pis",
             "rezalet",
             "sinir", "solmak", "sorun", "sinirlenmek", "sıkmak", "sıkıcı", "saldırı", "soğutmak", "sıkıntı", "suç",
-            "şiddet",
+            "şiddet", "şikâyet",
             "tartışma", "tehlike", "ters", "tiksinmek", "tartışmak", "tatsız", "tükenmek", "terk",
             "unutmak",
             "üzgün", "üzülmek", "üzmek", 
