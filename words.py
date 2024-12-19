@@ -35,7 +35,7 @@ realNegSuff = {"mayacak", "meyecek", "mayacağız", "meyeceğiz", "mayacağım",
 
 fakeNegSuff = { "malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","mak", "mek"}
 
-conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta", "henüz", "dolayı"}
+conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta", "henüz", "dolayı", "sonucunda"}
 
 negDoubleWords = {"ne", "ya"}
 
