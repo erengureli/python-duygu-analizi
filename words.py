@@ -14,7 +14,7 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "gergin", "göçmek", 
             "hüzün", "hata", "hasta", "hiçbir", "hiç",
             "intihar", "iğrenç", "istifa", "itici", "iptal",
-            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek", "kesmek", "kaçırmak", "korku", "kötülük", "kınamak", "kanamak",
+            "kavga", "kaybetmek", "kaybol", "kayıp", "kokain", "korkunç",  "kötü", "kırmak", "kırık", "kaza", "küflenmek", "kesmek", "kaçırmak", "korku", "kötülük", "kınamak", "kanamak", "kıskanç",
             "lanet",
             "mikrop", "mutsuz", "mızmız", "maalesef", "mahrum",
             "nefret", "negatif",
@@ -29,7 +29,7 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "üzgün", "üzülmek", "üzmek", 
             "vazgeçmek", "vefat", "veda",
             "yalan", "yanlış", "yanılgı", "yaralı", "yaramaz", "yok",  "yoksunmak", "yanmak", "yormak", "yalanmış", "yıkmak", "yakmak", "yangın", "yalnız",
-            "zehir"}
+            "zehir", "zarar"}
 
 realNegSuff = {"mayacak", "meyecek", "mayacağız", "meyeceğiz", "mayacağım", "meyeceğim", "mayacaksın", "meyeceksin", "mayacaklar", "meyecekler"}
 
