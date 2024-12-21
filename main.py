@@ -6,6 +6,8 @@ Güncel F-1 Değerleri:
     test3 --> 0.83668903803132
     test4 --> 0.9588377723970944
     test5 --> 0.953125
+    test6 --> 0.9182879377431907 (400 positive, 100 negative)
+    test7 --> 0.6409266409266409 (400 negative, 100 positive)
 '''
  
 from pandas import read_excel
