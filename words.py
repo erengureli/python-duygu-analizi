@@ -28,17 +28,18 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "unutmak",
             "üzgün", "üzülmek", "üzmek", 
             "vazgeçmek", "vefat", "veda",
-            "yalan", "yanlış", "yanılgı", "yaralı", "yaramaz", "yok",  "yoksunmak", "yanmak", "yormak", "yalanmış", "yıkmak", "yakmak", "yangın", "yalnız",
+            "yalan", "yanlış", "yanılgı", "yaralı", "yaramaz", "yok",  "yoksunmak", "yanmak", "yormak", "yalanmış", "yıkmak", "yakmak", "yangın", "yalnız", "yoksul",
             "zehir", "zarar"}
 
 realNegSuff = {"mayacak", "meyecek", "mayacağız", "meyeceğiz", "mayacağım", "meyeceğim", "mayacaksın", "meyeceksin", "mayacaklar", "meyecekler"}
 
-fakeNegSuff = { "malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","mak", "mek"}
+fakeNegSuff = {"malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","mak", "mek"}
 
 conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta", "henüz", "dolayı", "sonucunda"}
 
 negDoubleWords = {"ne", "ya"}
 
 reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz", "paha biçil",
-                "fena değil", "değişmem", "sevince boğ", "ilerleme kaydet", "bozuk para", "adam", "programlama", "gelişme"}
+                "fena değil", "değişmem", "sevince boğ", "ilerleme kaydet", "bozuk para", "adam",
+                "programlama", "gelişme", "kalkınma", "büyüme", "yapılanma"}
 
