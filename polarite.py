@@ -53,6 +53,7 @@ def calculatePolarite(paragraph: str) -> bool:
     if __name__=="__main__": print("Sonuç:", weigthList)
     
     ret = prod(weigthList)
+    if __name__=="__main__": print("Return:", ret)
     if ret == 1: # sonuç 1 ise pozitiftir, -1, -2, 2 gibi durumlarda ise negatiftir
         return True
     else:
@@ -91,4 +92,4 @@ def checkNegative(word: str) -> int:
     return retValue
 
 if __name__=="__main__":
-    calculatePolarite("Üzgünüm, maalesef hasta tedaviye cevap veriyor.")
+    calculatePolarite("Ayrıca belirtmeliyim ki ülke ekonomimizin bu kadar kötü olması beni de üzmüyor değil.")
