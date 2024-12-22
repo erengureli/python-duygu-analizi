@@ -67,7 +67,7 @@ def weigthDecider(word: str) -> int:
     analysis = analysisList[0]
     if __name__=="__main__": print("   Analiz -->", analysis, "Word -->", word)
 
-    if(word in negWords):
+    if word in negWords:
         return -1
     else:
         return checkNegative(str(analysis))
@@ -76,20 +76,21 @@ def checkNegative(word: str) -> int:
     # '+' işaretine göre ayır
     parts = word.split('+')
     retValue = 1
-    for part in parts:
+
+    for negWord in negWords:
+        if negWord == parts[0].split(':', 1)[0][1:]:
+            retValue = -2 # 'berbat ve kötücül' gibi cümleleri -1 * -1 yapıp olumlu yapmasın diye olumsuz kelimelere -2 dedim
+
+    for part in parts[1:]:
         # ':' işaretine göre ayır ve sağ tarafı kontrol et
         if ':' in part:
-            left, right = part.split(':', 1)  # ':' karakterine göre sağ tarafı al
-            for negWord in negWords:
-                if negWord == left[1:]:
-                    retValue *= -2 # 'berbat ve kötü' gibi cümleleri -1 * -1 yapıp olumlu yapmasın diye olumsuz kelimelere -2 dedim
-            if any(i in right for i in {"Neg", "Unable", "Without"}):  # Eğer sağ taraf "Neg" içeriyorsa
-                if retValue == -2 or retValue == -1:
+            sense = part.split(':', 1)[1]  # ':' karakterine göre sağ tarafı al
+            if any(i in sense for i in {"Neg", "Unable", "Without"}):  # Eğer sağ taraf "Neg" içeriyorsa
+                if retValue < 0:
                     retValue = 1
                 else:
                     retValue *= -1
-            
     return retValue
 
 if __name__=="__main__":
-    calculatePolarite("Ayrıca belirtmeliyim ki ülke ekonomimizin bu kadar kötü olması beni de üzmüyor değil.")
+    calculatePolarite("Bozguna uğramadık.")

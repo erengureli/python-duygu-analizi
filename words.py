@@ -22,7 +22,7 @@ negWords = {"acı", "alerji", "arızalanmak", "açgözlülük", "ağlamak", "âc
             "öldürmek", "ölmek", "ölü", "ölüm",
             "problem", "pis",
             "rezalet",
-            "sinir", "solmak", "sorun", "sinirlenmek", "sıkmak", "sıkıcı", "saldırı", "soğutmak", "sıkıntı", "suç",
+            "sinir", "solmak", "sorun", "sinirlenmek", "sıkmak", "sıkıcı", "saldırı", "soğutmak", "sıkıntı", "suç", "saçma",
             "şiddet", "şikâyet",
             "tartışma", "tehlike", "ters", "tiksinmek", "tartışmak", "tatsız", "tükenmek", "terk",
             "unutmak",
