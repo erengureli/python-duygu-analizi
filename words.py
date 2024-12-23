@@ -37,8 +37,6 @@ fakeNegSuff = {"malı", "meli","mayı","meyi", "maya", "meye", "ması","mesi","m
 
 conWords = {"ama", "fakat", "lakin", "ancak", "için", "hatta", "henüz", "dolayı", "sonucunda"}
 
-negDoubleWords = {"ne", "ya"}
-
 reduplications = {"kalkar kalkmaz", "gelir gelmez", "gider gitmez", "yapar yapmaz", "paha biçil",
                 "fena değil", "değişmem", "sevince boğ", "ilerleme kaydet", "bozuk para", "adam",
                 "programlama", "gelişme", "kalkınma", "büyüme", "yapılanma"}
