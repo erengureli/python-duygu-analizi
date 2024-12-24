@@ -1,13 +1,6 @@
 # Python Duygu Analizi Ödevi
 
-## Emeği Geçenler
-* Eren KÖSE / 22360859075
-* Eren GÜRELİ / 22360859016
-* Mustafa AYKUT / 22360859028
-* Ahmet Yusuf BİRDİR / 21360859026
-* Ahmet Furkan ÖCEL / 23360859729
-
-## Giriş
+## Projemizin Amacı
 Bu proje, cümlelerin duygu analizini gerçekleştirmek amacıyla
 geliştirilmiştir. Pozitif ve negatif cümleleri tespit etmek için kullanıcı
 tarafından belirlenmiş kelime ve ifadeler üzerinde çalışan bir kural
@@ -24,3 +17,10 @@ anlaşılır bir çözüm sunmayı amaçlarken, kullanıcı tarafından
 * jpype
 * nltk
 * zemberek
+
+## Emeği Geçenler
+* Eren KÖSE / 22360859075
+* Eren GÜRELİ / 22360859016
+* Mustafa AYKUT / 22360859028
+* Ahmet Yusuf BİRDİR / 21360859026
+* Ahmet Furkan ÖCEL / 23360859729
