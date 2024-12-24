@@ -4,6 +4,11 @@ from jpype.types import *
 
 from nltk.tokenize import word_tokenize
 
+# Sadece 1 kere indirmesi gerekiyor. Her çalıştığında indirilmiş mi diye kontrol ediyor.
+from nltk import download
+download('stopwords')
+download('punkt_tab')
+
 from words import *
 from math import prod
 
@@ -19,11 +24,6 @@ except:
         except:
             print("Hata oluştu.")
             exit(1)
-
-# Sadece 1 kere indirmesi gerekiyor. Her çalıştığında indirilmiş mi diye kontrol ediyor.
-from nltk import download
-download('stopwords')
-download('punkt_tab')
 
 # import the Java modules
 TurkishMorphology = JClass("zemberek.morphology.TurkishMorphology")
